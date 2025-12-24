@@ -8,7 +8,7 @@ NC='\033[0m'
 # Timezone
 echo -e "${BLUE}Setting the timezone...${NC}"
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-hwclock -–systohc
+hwclock --systohc
 
 # Locale
 echo -e "${BLUE}Setting the required locales...${NC}"
@@ -25,7 +25,7 @@ echo "127.0.0.1    localhost
 127.0.1.1    $hname.localdomain    $hname" >> /etc/hosts
 
 echo -e "${BLUE}Installing packages from the standard repos...${NC}"
-pacman --needed -S - < pkglist.txt
+pacman --needed -Sy - < pkglist.txt
 
 echo -e "${BLUE}Setting up GRUB bootloader...${NC}"
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
