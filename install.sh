@@ -25,7 +25,7 @@ echo "127.0.0.1    localhost
 127.0.1.1    $hname.localdomain    $hname" >> /etc/hosts
 
 echo -e "${BLUE}Installing packages from the standard repos...${NC}"
-pacman --needed -Sy - < pkglist.txt
+pacman --needed -Sy - < /home/pkglist.txt
 
 echo -e "${BLUE}Setting up GRUB bootloader...${NC}"
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
