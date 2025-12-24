@@ -5,10 +5,14 @@ GREEN='\033[1;32m'
 BLUE='\033[1;34m'
 NC='\033[0m'
 
+# Make sure env variables are correct
+source $HOME/.profile
+[ ! -d $XDG_DATA_HOME ] && mkdir -p $XDG_DATA_HOME/themes
+
 echo -e "${BLUE}Installing paru, the AUR helper...${NC}"
 mkdir -p $HOME/.cache/paru/clone && git clone https://aur.archlinux.org/paru-bin.git $HOME/.cache/paru/clone/paru-bin
 cd $HOME/.cache/paru/clone/paru-bin && makepkg -si
-cd $(dirname $(readlink -f $0))
+cd $HOME
 
 echo -e "${BLUE}Installing AUR packages...${NC}"
 paru -S - < aurpkglist.txt
