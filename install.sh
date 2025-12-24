@@ -32,14 +32,14 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 echo -e "${BLUE}Enabling necessary system-wide services...${NC}"
-systemctl enable NetworkManager bluetooth libvirtd tlp udisks2 sddm paccache.timer
+systemctl enable --now NetworkManager bluetooth libvirtd tlp udisks2 sddm paccache.timer
 sed -i -e "s/\#AutoEnable=true/AutoEnable=false/g" /etc/bluetooth/main.conf
 
 # Set the sddm theme (will be installed as AUR pkg later)
 sed -i -e 's/^Current=*.*/Current=catppuccin-mocha-sky/g' /etc/sddm.conf
 
 # Give elevated privileges to members of 'wheel' group
-sed -i -e 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
+sed -i -e 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
 
 # Set root password
 echo 'Set root password'
