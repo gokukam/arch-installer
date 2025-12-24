@@ -18,7 +18,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cp install.sh setup.sh pkglist.txt aurpkglist.txt /mnt/home/
 
 # Chroot into the system and run the install script
-arch-chroot /mnt sh /home/install.sh
+arch-chroot /mnt bash /home/install.sh
 
 # Once the install script exits chroot, clean up
 rm /mnt/home/install.sh /mnt/home/pkglist.txt
