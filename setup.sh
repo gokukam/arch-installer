@@ -5,8 +5,9 @@ GREEN='\033[1;32m'
 BLUE='\033[1;34m'
 NC='\033[0m'
 
-# Make sure themes dir exists
+# Make sure themes folder and GTK4 folder exist
 [ ! -d $HOME/.local/share/themes ] && mkdir -p $HOME/.local/share/themes
+[ ! -d $HOME/.config/gtk-4.0 ] && mkdir $HOME/.config/gtk-4.0
 
 echo -e "${BLUE}Installing paru, the AUR helper...${NC}"
 mkdir -p $HOME/.cache/paru/clone && git clone https://aur.archlinux.org/paru-bin.git $HOME/.cache/paru/clone/paru-bin
