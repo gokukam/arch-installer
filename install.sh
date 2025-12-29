@@ -41,7 +41,7 @@ sddm --example-config > /etc/sddm.conf
 sed -i -e 's/^Current=*.*/Current=catppuccin-mocha-sky/g' /etc/sddm.conf
 
 # Give elevated privileges to members of 'wheel' group
-sed -i -e 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
+sed -i -e 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
 
 # Set root password
 echo 'Set root password'
