@@ -25,7 +25,7 @@ rm /mnt/home/install.sh /mnt/home/pkglist.txt
 
 # Now chroot into the system as the normal user and run the setup script
 user=$(cat /mnt/home/username)
-arch-chroot -u $user /mnt bash -c "HOME=/home/$user; export HOME; ./$HOME/setup.sh"
+arch-chroot -u $user /mnt bash -c "HOME=/home/$user; export HOME; ./home/$user/setup.sh"
 
 # Once the setup script exits chroot, clean up
 rm /mnt/home/$user/setup.sh /mnt/home/$user/aurpkglist.txt /mnt/home/username
