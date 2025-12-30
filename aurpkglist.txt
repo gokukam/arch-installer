@@ -3,7 +3,6 @@ brave-bin
 breeze-snow-cursor-theme
 catppuccin-sddm-theme-mocha
 downgrade
-fastfetch-git
 syncthing-gtk
 ttf-ms-fonts
 zoom
