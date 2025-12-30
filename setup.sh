@@ -7,7 +7,7 @@ NC='\033[0m'
 
 # Make sure themes folder and GTK4 folder exist
 [ ! -d $HOME/.local/share/themes ] && mkdir -p $HOME/.local/share/themes
-[ ! -d $HOME/.config/gtk-4.0 ] && mkdir $HOME/.config/gtk-4.0
+[ ! -d $HOME/.config/gtk-4.0 ] && mkdir -p $HOME/.config/gtk-4.0
 
 echo -e "${BLUE}Installing paru, the AUR helper...${NC}"
 mkdir -p $HOME/.cache/paru/clone && git clone https://aur.archlinux.org/paru-bin.git $HOME/.cache/paru/clone/paru-bin
