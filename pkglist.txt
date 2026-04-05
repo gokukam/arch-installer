@@ -31,7 +31,7 @@ gvfs
 gvfs-gphoto2
 gvfs-mtp
 hplip
-iptables-nft
+iptables
 kvantum
 kvantum-qt5
 libreoffice-still
