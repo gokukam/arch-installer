@@ -31,6 +31,7 @@ gvfs
 gvfs-gphoto2
 gvfs-mtp
 hplip
+intel-media-driver
 iptables
 kvantum
 kvantum-qt5
@@ -97,6 +98,7 @@ virt-manager
 virtualbox
 vlc
 vlc-plugins-all
+vulkan-intel
 wget
 wireplumber
 xdg-desktop-portal
