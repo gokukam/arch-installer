@@ -86,6 +86,7 @@ sudo
 texlive-bin
 texlive-latexextra
 texlive-latexrecommended
+thermald
 tlp
 transmission-gtk
 ttc-iosevka-aile
@@ -101,11 +102,16 @@ vlc-plugins-all
 vulkan-intel
 wget
 wireplumber
+xclip
 xdg-desktop-portal
 xdg-user-dirs
 xorg-server
+xorg-xdpyinfo
 xorg-xhost
 xorg-xprop
+xorg-xrandr
+xorg-xrdb
+xorg-xset
 xorg-xsetroot
 xwallpaper
 yad

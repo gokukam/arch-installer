@@ -33,8 +33,10 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 echo -e "${BLUE}Enabling necessary system-wide services...${NC}"
-systemctl enable NetworkManager bluetooth libvirtd tlp udisks2 sddm paccache.timer
+systemctl enable NetworkManager bluetooth libvirtd tlp thermald udisks2 sddm paccache.timer
 sed -i -e "s/#AutoEnable=true/AutoEnable=false/g" /etc/bluetooth/main.conf
+sed -i -e "s/#START_CHARGE_THRESH_BAT0=75/START_CHARGE_THRESH_BAT0=75/g" /etc/tlp.conf
+sed -i -e "s/#STOP_CHARGE_THRESH_BAT0=80/STOP_CHARGE_THRESH_BAT0=80/g" /etc/tlp.conf
 
 # Set the sddm theme (will be installed as AUR pkg later)
 sddm --example-config > /etc/sddm.conf
