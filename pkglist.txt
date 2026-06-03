@@ -94,6 +94,7 @@ ttf-iosevka-nerd
 ttf-jetbrains-mono-nerd
 ttf-roboto
 ttf-ubuntu-font-family
+unzip
 viewnior
 virt-manager
 virtualbox
