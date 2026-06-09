@@ -9,6 +9,9 @@ NC='\033[0m'
 [ ! -d $HOME/.local/share/themes ] && mkdir -p $HOME/.local/share/themes
 [ ! -d $HOME/.config/gtk-4.0 ] && mkdir -p $HOME/.config/gtk-4.0
 
+echo -e "${BLUE}Generating XDG user dirs...${NC}"
+xdg-user-dirs-update
+
 echo -e "${BLUE}Installing paru, the AUR helper...${NC}"
 mkdir -p $HOME/.cache/paru/clone && git clone https://aur.archlinux.org/paru-bin.git $HOME/.cache/paru/clone/paru-bin
 cd $HOME/.cache/paru/clone/paru-bin && makepkg -si
