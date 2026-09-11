@@ -86,6 +86,8 @@ sudo
 texlive-bin
 texlive-latexextra
 texlive-latexrecommended
+texlive-luatex
+texlive-fontsrecommended
 thermald
 tlp
 transmission-gtk
